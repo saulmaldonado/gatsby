@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { rhythm, scale } from "../utils/typography"
 
+import './blog-post.css'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -17,24 +19,44 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1
               style={{
-                textAlign:'center',
-                marginTop: rhythm(1),
+                maxWidth:'50vw',
+                paddingLeft: '10px',
                 marginBottom: 0,
+                textAlign: 'left',
+                paddingLeft:'400px',
+                height: '10vh',
+                paddingTop: '20px'
               }}
             >
               {post.frontmatter.title}
+              <div
+              style={{
+                border:'black solid 2px',
+                width: '60vw',
+                position: 'relative',
+                right: '100px',
+                top: '10px'
+              }}
+              ></div>
             </h1>
             <p
               style={{
-                ...scale(-1 / 5),
                 display: `block`,
-                marginBottom: rhythm(1),
+                fontSize: '20px',
+                fontWeight:'bold',
+                position:'relative',
+                right: '470px'
               }}
             >
               {post.frontmatter.date}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} style={{
+            maxWidth: '60vw',
+            marginLeft:'auto',
+            marginRight:'auto',
+            display: 'flex'
+          }} />
           <hr
             style={{
               marginBottom: rhythm(1),

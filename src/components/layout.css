@@ -1,21 +1,19 @@
-.main{
+main{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    align-content: center;
     text-align: center;
 }
-
 .rootHeader {
-    background-color: black;
-    width: 100vw;
+    background-color:black;
+    width: 1000px;
     margin-top: 0px;
     height: 20vh;
     padding-top: 50px;
     color: white;
 }
-
-.maintitle {
-    color: white;
-    text-decoration: none;
+footer {
+    margin: 0px;
+    padding-top: 350px;
+    margin-left: 900px;
 }
-
